@@ -1,0 +1,7 @@
+/.idea/
+/node_modules/
+.env
+/cypress/videos/
+/cypress/downloads/
+/cypress/screenshots/
+/prisma/database.db

@@ -1,0 +1,19 @@
+{
+  "name": "vite-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "node runInstall.js",
+    "dev": "node runDev.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "cross-spawn": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "wait-on": "^7.0.1"
+  }
+}
