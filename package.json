@@ -5,15 +5,17 @@
   "main": "index.js",
   "scripts": {
     "install": "node runInstall.js",
-    "dev": "node runDev.js"
+    "dev": "node runDev.js",
+    "test": "npx cypress open -b chrome --e2e"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^7.6.0",
-    "cross-spawn": "^7.0.3",
-    "dotenv": "^16.0.3",
-    "wait-on": "^7.0.1"
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.4",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.1"
   }
 }
