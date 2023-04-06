@@ -4,7 +4,9 @@ import YAML from 'yamljs';
 import {Error} from './types';
 import * as dotenv from 'dotenv';
 import usersRoutes from "./routes/usersRoutes";
+import sessionsRoutes from "./routes/sessionsRoutes";
 import cors from 'cors';
+import { createPinia } from "pinia";
 
 dotenv.config();
 const port: Number = Number(process.env.PORT) || 3000;
@@ -26,6 +28,7 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 // Routes
 
 app.use('/users', usersRoutes);
+app.use('/sessions', sessionsRoutes);
 
 // Health check
 app.get('/health-check', (req, res) => {
