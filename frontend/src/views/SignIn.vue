@@ -29,6 +29,8 @@ export default {
             store.setToken(response.sessionId);*/
 
 
+            
+
             this.$router.push('/')
           })
           .catch(error => {

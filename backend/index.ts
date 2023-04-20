@@ -7,6 +7,7 @@ import usersRoutes from "./routes/usersRoutes";
 import sessionsRoutes from "./routes/sessionsRoutes";
 import cors from 'cors';
 import { createPinia } from "pinia";
+import taskRoutes from "./routes/tasks"
 
 dotenv.config();
 const port: Number = Number(process.env.PORT) || 3000;
@@ -18,6 +19,7 @@ app.use(express.json());
 app.use(express.static('public'));
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use(cors());
+app.use('/tasks', taskRoutes);
 
 // Error handling
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
