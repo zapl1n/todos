@@ -1,3 +1,4 @@
+
 import express, { NextFunction, Request, Response } from 'express';
 import { handleErrors } from './handleErrors';
 import { PrismaClient } from '@prisma/client';
@@ -12,7 +13,7 @@ const router = express.Router();
 
 
 
-  
+
 /*
 export const useSession = defineStore('session',  {
     state: () => ({
@@ -61,21 +62,17 @@ router.post(
     })
 );
 
-router.delete(
-    '/',
+router.post(
+    '/logout',
     handleErrors(async (req: Request, res: Response) => {
-        // Get the session ID from the request cookies
-        const sessionId = req.cookies.sessionId;
+        const sessionId = req.body.sessionId;
 
         if (!sessionId) {
-            return res.status(401).send({ error: 'You are not logged in' });
+            return res.status(401).send({ error: 'Invalid sessionID' });
         }
 
         // Delete the session from the database
         await prisma.session.delete({ where: { id: sessionId } });
-
-        // Clear the session cookie
-        res.clearCookie('sessionId');
 
         return res.status(200).send({ message: 'You have been logged out' });
     })

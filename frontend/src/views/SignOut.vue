@@ -17,7 +17,7 @@ export default {
           // Remove the session token from local storage
           localStorage.removeItem('sessionId');
           // Redirect to the sign-in page
-          this.$router.push('/signin');
+          this.$router.push('/signIn');
         })
         .catch(error => {
           console.error('Failed to sign out:', error);

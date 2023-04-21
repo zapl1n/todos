@@ -1,11 +1,7 @@
 
-
 <script>
 import { $http } from '../utils/http'
-//import { useSession } from 'pinia';
-//import { useSession } from '../../../backend/routes/sessionsRoutes';
 
-//const store = useSession();
 
 export default {
   data() {
